@@ -1,14 +1,12 @@
 def taille_chaine(chaine):
-    # Calcule la taille de la chaîne (nombre de caractères)
     taille = 0
     for char in chaine:
-        if char == '\0':  # Caractère de fin de chaîne
+        if char == '\0':
             break
         taille += 1
     return taille
 
 def pourcentage_voyelles(chaine):
-    # Calcule le pourcentage de voyelles dans la chaîne
     taille = taille_chaine(chaine)
     voyelles = "aeiouAEIOU"
     nombre_voyelles = sum(1 for char in chaine if char in voyelles)
@@ -16,7 +14,6 @@ def pourcentage_voyelles(chaine):
     return pourcentage
 
 def est_sous_chaine(chaine, sous_chaine):
-    # Teste si la sous-chaîne est présente dans la chaîne et donne le début de la première occurrence
     taille_chaine = taille_chaine(chaine)
     taille_sous_chaine = taille_chaine(sous_chaine)
 
@@ -27,7 +24,6 @@ def est_sous_chaine(chaine, sous_chaine):
     return False, -1
 
 def nombre_occurrences(chaine, sous_chaine):
-    # Calcule le nombre d'occurrences de la sous-chaîne dans la chaîne
     nombre = 0
     taille_chaine = taille_chaine(chaine)
     taille_sous_chaine = taille_chaine(sous_chaine)
@@ -38,10 +34,8 @@ def nombre_occurrences(chaine, sous_chaine):
 
     return nombre
 
-# Demande à l'utilisateur d'entrer une chaîne de caractères
 chaine_utilisateur = input("Entrez une chaîne de caractères : ")
 
-# Teste les fonctions avec différentes phrases
 phrases = [
     "Le wagon bleu est rapide.",
     "Un petit wagon roule vite.",

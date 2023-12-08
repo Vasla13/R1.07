@@ -28,13 +28,10 @@ def calcul_moyenne(notes, coefficients):
 def est_admis(moyenne, notes):
     return moyenne > 10 and all(note >= 8 for note in notes)
 
-# Saisie des notes et coefficients
 notes, coefficients = saisie_notes()
 
-# Calcul de la moyenne générale
 moyenne_generale = calcul_moyenne(notes, coefficients)
 
-# Évaluation de l'admission
 if est_admis(moyenne_generale, notes):
     print(f"L'étudiant est admis avec une moyenne générale de {moyenne_generale:.2f}.")
 else:

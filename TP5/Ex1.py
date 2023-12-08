@@ -11,13 +11,10 @@ def afficher_resultat(nom, prenom):
     print(f"{prenom_capitalized} {nom_majuscules}")
 
 
-# Saisie des informations pour la première personne
 nom1, prenom1 = saisie_personne()
 
-# Saisie des informations pour la deuxième personne
 nom2, prenom2 = saisie_personne()
 
-# Comparaison et affichage dans l'ordre alphabétique
 if nom1.lower() == nom2.lower():
     if prenom1.lower() <= prenom2.lower():
         afficher_resultat(nom1, prenom1)
